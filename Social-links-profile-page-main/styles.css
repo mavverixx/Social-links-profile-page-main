@@ -1,0 +1,96 @@
+/* Basic CSS reset */
+:root {
+    --primary-color: hsl(0, 0%, 8%);
+    --secondary-color: hsl(0, 0%, 12%);
+    --tertiary-color: hsl(0, 0%, 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+#head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 8%); /* Correct syntax for Grey 900 */
+}
+
+#body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 375px; /* Mobile width */
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+#rick-pic {
+    border-radius: 50%;
+    border: 8px solid hsl(114, 77%, 49%);
+    width: 100px;
+    height: 100px;  
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+   
+}
+#box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 423px; /* Corrected from 4230px which seems too large */
+    height: 90px;
+    margin-top: 200px;
+    padding: 10px 10px 40px 10px;
+    
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: hsl(0, 0%, 20%); /* Correct syntax for Grey 700 */
+    gap: 16px;
+    width: 140px; /* Single width declaration */
+    /* Removed duplicate width property */
+    height: 20px;
+    margin-top: 150px;
+}
+/* 
+/* Button styles */
+.buttons button {
+    width: 100%;
+    padding: 12px 24px;
+    background-color: hsl(0, 0%, 12%); /* Grey 800 */
+    color: hsl(0, 0%, 100%); /* White */
+    border: none;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+} 
+
+.buttons button:hover {
+    background-color: hsl(75, 94%, 57%); /* Green */
+    color: hsl(0, 0%, 12%); /* Grey 800 */
+}
+
+/* Desktop styles */
+@media (min-width: 1440px) {
+    #body {
+        max-width: 1440px;
+    }
+
+    .buttons {
+        max-width: 480px;
+    }
+}
