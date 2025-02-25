@@ -2,35 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Social links profile</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <title>Rikki's Social links profile</title>
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
   <link rel="stylesheet" href="styles.css">
 </head>
-  <body>
-      <div id="box">
-              <img id="rick-pic" src="./assets/images/Rikki.jpg" alt="Rikki Henry">
-              
-              Creative Technologist for SaaS & AI/ML | Award-Winning Director Front-End Developer | (React/JavaScript) <br> London, UK
+<body>
+  <main>
+    <div id="box">
+      <img id="rick-pic" src="./assets/images/Rikki.jpg" alt="Rikki Henry">
+      
+      <p>Creative Technologist for SaaS & AI/ML | Award-Winning Director Front-End Developer | (React/JavaScript) <br> London, UK</p>
 
-            <div class="buttons">
-                  <button >GitHub</button> 
-                  <button >Frontend Mentor</button> 
-                  <button >LinkedIn</button> 
-                  <button >Twitter</button> 
-                  <button >Instagram</button> 
-            </div>
-
-      </div> 
-   
+      <div class="buttons">
+        <canvas id="github-button" class="github-animation" width="500" height="500"></canvas> 
+        <a href="https://www.frontendmentor.io/"><button>Frontend Mentor</button></a>
+        <a href="https://www.linkedin.com/"><button>LinkedIn</button></a>
+        <a href="https://twitter.com/"><button>Twitter</button></a>
+        <a href="https://www.instagram.com/"><button>Instagram</button></a>
+      </div>
     </div>
-  </body>
+  </main>
+  
+  <div class="container">
+    
+  </div>
+
+  <footer class="attribution">
+    
+  </footer>
+
+  <script src="https://unpkg.com/@rive-app/canvas"></script>
+  <script>
+    const r = new rive.Rive({
+      src: "github-button.riv",
+      canvas: document.getElementById("canvas"),
+      autoplay: true,
+      stateMachines: "bumpy",
+      onLoad: () => {
+        r.resizeDrawingSurfaceToCanvas();
+      },
+    });
+    document.getElementById("github-button").addEventListener("click", function() {
+      window.open("https://github.com/", "_blank");
+    });
+  </script>
+  
+</body>
 </html>
