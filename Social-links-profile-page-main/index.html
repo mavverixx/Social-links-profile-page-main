@@ -18,13 +18,16 @@
       
       <p>Creative Technologist for SaaS & AI/ML | Award-Winning Director Front-End Developer | (React/JavaScript) <br> London, UK</p>
 
+
       <div class="buttons">
-        <canvas id="github-button" width="200" height="500"></canvas> 
-        <a href="https://www.frontendmentor.io/"><button>Frontend Mentor</button></a>
+        <a href="https://github.com/mavverixx"><canvas id="github-button" width="1150" height="1150"></canvas></a> 
+        <a href="https://www.linkedin.com/in/rikkihenry/"><canvas id="linkedin" width="150" height="150"></canvas></a>
+        <!-- <a href="https://www.frontendmentor.io/"><button>Frontend Mentor</button></a>
         <a href="https://www.linkedin.com/"><button>LinkedIn</button></a>
         <a href="https://twitter.com/"><button>Twitter</button></a>
-        <a href="https://www.instagram.com/"><button>Instagram</button></a>
+        <a href="https://www.instagram.com/"><button>Instagram</button></a> -->
       </div>
+
     </div>
   </main>
   
@@ -37,24 +40,8 @@
   </footer>
 
   <script src="https://unpkg.com/@rive-app/canvas"></script>
-  <script>
-    const r = new rive.Rive({
-      src: "github-button.riv",
-      canvas: document.getElementById("github-button"),
-      autoplay: true,
-      stateMachines: "State Machine 1",
-      layout: new rive.Layout({
-        fit: rive.Fit.Contain,
-        alignment: rive.Alignment.Center
-      }),
-      onLoad: () => {
-        r.resizeDrawingSurfaceToCanvas();
-      },
-    });
-    document.getElementById("github-button").addEventListener("click", function() {
-      window.open("https://github.com/", "_blank");
-    });
-  </script>
+  <script src="main.js"></script>
+  
   
 </body>
 </html>
