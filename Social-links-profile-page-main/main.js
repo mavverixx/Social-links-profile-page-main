@@ -1,65 +1,48 @@
-// main.js
-document.addEventListener("DOMContentLoaded", function() {
-  // Initialize Rive button
-  const r = new rive.Rive({
+document.addEventListener("DOMContentLoaded", () => {
+  // Initialize GitHub button
+  const githubRive = new rive.Rive({
     src: "github-button.riv",
     canvas: document.getElementById("github-button"),
     autoplay: true,
     stateMachines: "State Machine 1",
     layout: new rive.Layout({
-      fit: rive.Fit.Contain,
+      fit: rive.Fit.Cover,
       alignment: rive.Alignment.Center
     }),
     onLoad: () => {
-      r.resizeDrawingSurfaceToCanvas();
+      githubRive.resizeDrawingSurfaceToCanvas();
     },
   });
 
   // GitHub button click handler
-  document.getElementById("github-button").addEventListener("click", function() {
+  document.getElementById("github-button").addEventListener("click", () => {
     window.open("https://github.com/", "_blank");
   });
 
-  // Initialize GitHub button
-const githubRive = new rive.Rive({
-  src: "linkedin-button.riv",
-  canvas: document.getElementById("github-button"),
-  autoplay: true,
-  stateMachines: "State Machine 1",
-  layout: new rive.Layout({
-    fit: rive.Fit.Contain,
-    alignment: rive.Alignment.Center
-  }),
-  onLoad: () => {
-    githubRive.resizeDrawingSurfaceToCanvas();
-  },
-});
-
-// Add click event to GitHub button
-document.getElementById("github-button").addEventListener("click", function() {
-  window.open("https://github.com/", "_blank");
-});
-
-// Initialize LinkedIn button (assuming you have a canvas with id "linkedin-button")
+// Clean initialization for LinkedIn button
+// Initialize LinkedIn button with smaller animation
 const linkedinRive = new rive.Rive({
-  src: "Linkedin-button.riv",
+  src: "linkedin-button.riv",
   canvas: document.getElementById("linkedin-button"),
   autoplay: true,
   stateMachines: "State Machine 1",
   layout: new rive.Layout({
-    fit: rive.Fit.Contain,
-    alignment: rive.Alignment.Center
+    fit: rive.Fit.Contain,    // Changed from Cover to Contain
+    alignment: rive.Alignment.Cover,
+    minX: 2,
+    minY: 1,
+    maxX: 2,
+    maxY: 1
   }),
   onLoad: () => {
     linkedinRive.resizeDrawingSurfaceToCanvas();
   },
 });
 
-// Add click event to LinkedIn button
-document.getElementById("linkedin-button").addEventListener("click", function() {
-  window.open("https://linkedin.com/", "_blank");
+// LinkedIn button click handler
+document.getElementById("linkedin-button").addEventListener("click", () => {
+  window.open("https://www.linkedin.com/in/rikkihenry/", "_blank");
 });
-
   /*
   document.getElementById("X-button").addEventListener("click", function() {
     console.log("Another button clicked");
