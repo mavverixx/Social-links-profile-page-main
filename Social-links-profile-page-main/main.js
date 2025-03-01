@@ -1,6 +1,7 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Initialize GitHub button
-  const githubRive = new rive.Rive({
+// main.js
+document.addEventListener("DOMContentLoaded", function() {
+  // Initialize Rive button
+  const r = new rive.Rive({
     src: "github-button.riv",
     canvas: document.getElementById("github-button"),
     autoplay: true,
@@ -15,50 +16,61 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // GitHub button click handler
-  document.getElementById("github-button").addEventListener("click", () => {
+  document.getElementById("github-button").addEventListener("click", function() {
     window.open("https://github.com/", "_blank");
   });
 
-// Clean initialization for LinkedIn button
-// Initialize LinkedIn button with smaller animation
-const linkedinRive = new rive.Rive({
+  // Initialize GitHub button
+const githubRive = new rive.Rive({
   src: "linkedin-button.riv",
+  canvas: document.getElementById("github-button"),
+  autoplay: true,
+  stateMachines: "State Machine 1",
+  layout: new rive.Layout({
+    fit: rive.Fit.Contain,
+    alignment: rive.Alignment.Center
+  }),
+  onLoad: () => {
+    githubRive.resizeDrawingSurfaceToCanvas();
+  },
+});
+
+// Add click event to GitHub button
+document.getElementById("github-button").addEventListener("click", function() {
+  window.open("https://github.com/", "_blank");
+});
+
+// Initialize LinkedIn button (assuming you have a canvas with id "linkedin-button")
+const linkedinRive = new rive.Rive({
+  src: "Linkedin-button.riv",
   canvas: document.getElementById("linkedin-button"),
   autoplay: true,
   stateMachines: "State Machine 1",
   layout: new rive.Layout({
-    fit: rive.Fit.Contain,    // Changed from Cover to Contain
-    alignment: rive.Alignment.Cover,
-    minX: 2,
-    minY: 1,
-    maxX: 2,
-    maxY: 1
+    fit: rive.Fit.Contain,
+    alignment: rive.Alignment.Center
   }),
   onLoad: () => {
     linkedinRive.resizeDrawingSurfaceToCanvas();
   },
 });
 
-// LinkedIn button click handler
-document.getElementById("linkedin-button").addEventListener("click", () => {
-  window.open("https://www.linkedin.com/in/rikkihenry/", "_blank");
+// Add click event to LinkedIn button
+document.getElementById("linkedin-button").addEventListener("click", function() {
+  window.open("https://linkedin.com/", "_blank");
 });
+
   /*
-  document.getElementById("X-button").addEventListener("click", function() {
-    console.log("Another button clicked");
-    // Do something
+  document.getElementById("X-button").addEventListener("click", () => {
+    window.open("https://x.com/", "_blank");
   });
-  */
-    /*
-  document.getElementById("instagram-button").addEventListener("click", function() {
-    console.log("Another button clicked");
-    // Do something
+  
+  document.getElementById("instagram-button").addEventListener("click", () => {
+    window.open("https://instagram.com/", "_blank");
   });
-  */
-   /*
-  document.getElementById("frontend-button").addEventListener("click", function() {
-    console.log("Another button clicked");
-    // Do something
+  
+  document.getElementById("frontend-button").addEventListener("click", () => {
+    // Add appropriate action
   });
   */
 });
