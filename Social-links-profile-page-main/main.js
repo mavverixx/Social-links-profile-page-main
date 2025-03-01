@@ -1,76 +1,55 @@
-// main.js
-document.addEventListener("DOMContentLoaded", function() {
-  // Initialize Rive button
-  const r = new rive.Rive({
-    src: "github-button.riv",
-    canvas: document.getElementById("github-button"),
+document.addEventListener("DOMContentLoaded", () => {
+  // Configuration for all buttons
+  const buttonConfigs = [
+    {
+      id: "github-button",
+      src: "github-button.riv",
+      url: "https://github.com/mavverixx"
+    },
+    {
+      id: "linkedin-button",
+      src: "linkedin-button.riv",
+      url: "https://www.linkedin.com/in/rikkihenry/"
+    },
+    {
+      id: "twitter-button",
+      src: "twitter-button.riv",
+      url: "https://twitter.com/"
+    },
+    {
+      id: "instagram-button",
+      src: "instagram-button.riv",
+      url: "https://www.instagram.com/"
+    },
+    {
+      id: "frontend-button",
+      src: "frontend-button.riv",
+      url: "https://www.frontendmentor.io/"
+    }
+  ];
+// Initialize all Rive buttons using for...of instead of forEach
+for (const config of buttonConfigs) {
+  const element = document.getElementById(config.id);
+  // Skip if element doesn't exist
+  if (!element) continue;
+
+  const riveInstance = new rive.Rive({
+    src: config.src,
+    canvas: element,
     autoplay: true,
     stateMachines: "State Machine 1",
     layout: new rive.Layout({
-      fit: rive.Fit.Cover,
+      fit: rive.Fit.Contain,
       alignment: rive.Alignment.Center
     }),
     onLoad: () => {
-      githubRive.resizeDrawingSurfaceToCanvas();
-    },
+      riveInstance.resizeDrawingSurfaceToCanvas();
+    }
   });
 
-  // GitHub button click handler
-  document.getElementById("github-button").addEventListener("click", function() {
-    window.open("https://github.com/", "_blank");
+  // Add click event listener
+  element.addEventListener("click", () => {
+    window.open(config.url, "_blank");
   });
-
-  // Initialize GitHub button
-const githubRive = new rive.Rive({
-  src: "linkedin-button.riv",
-  canvas: document.getElementById("github-button"),
-  autoplay: true,
-  stateMachines: "State Machine 1",
-  layout: new rive.Layout({
-    fit: rive.Fit.Contain,
-    alignment: rive.Alignment.Center
-  }),
-  onLoad: () => {
-    githubRive.resizeDrawingSurfaceToCanvas();
-  },
-});
-
-// Add click event to GitHub button
-document.getElementById("github-button").addEventListener("click", function() {
-  window.open("https://github.com/", "_blank");
-});
-
-// Initialize LinkedIn button (assuming you have a canvas with id "linkedin-button")
-const linkedinRive = new rive.Rive({
-  src: "Linkedin-button.riv",
-  canvas: document.getElementById("linkedin-button"),
-  autoplay: true,
-  stateMachines: "State Machine 1",
-  layout: new rive.Layout({
-    fit: rive.Fit.Contain,
-    alignment: rive.Alignment.Center
-  }),
-  onLoad: () => {
-    linkedinRive.resizeDrawingSurfaceToCanvas();
-  },
-});
-
-// Add click event to LinkedIn button
-document.getElementById("linkedin-button").addEventListener("click", function() {
-  window.open("https://linkedin.com/", "_blank");
-});
-
-  /*
-  document.getElementById("X-button").addEventListener("click", () => {
-    window.open("https://x.com/", "_blank");
-  });
-  
-  document.getElementById("instagram-button").addEventListener("click", () => {
-    window.open("https://instagram.com/", "_blank");
-  });
-  
-  document.getElementById("frontend-button").addEventListener("click", () => {
-    // Add appropriate action
-  });
-  */
+}
 });
