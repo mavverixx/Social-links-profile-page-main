@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Rive library loaded:", typeof rive !== 'undefined');
 
-  
+
   // GitHub button
   const githubButton = new rive.Rive({
-    src: "./rive/rive/github_button.riv", // Make sure file path is correct
+    src: "./rive/github-button.riv", // Make sure file path is correct
     canvas: document.getElementById("github-button"),
     autoplay: true,
     stateMachines: "State Machine 1",
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   // LinkedIn button
   const linkedinButton = new rive.Rive({
-    src: "./rive/rive/linkedin_button.riv", // Make sure file path is correct
+    src: "./rive/linkedin-button.riv", // Make sure file path is correct
     canvas: document.getElementById("linkedin-button"),
     autoplay: true,
     stateMachines: "State Machine 1",
@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
   
   // Twitter button
   const twitterButton = new rive.Rive({
-    src: "./rive/rive/twitter_button.riv", // Make sure file path is correct
-    canvas: document.getElementById("twitter-button"),
+    src: "./rive/x_button.riv", // Make sure file path is correct
+    canvas: document.getElementById("x-button"),
     autoplay: true,
     stateMachines: "State Machine 1",
     onLoad: () => {
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   // Instagram button
   const instagramButton = new rive.Rive({
-    src: "./rive/rive/instagram_button.riv", // Make sure file path is correct
+    src: "./rive/instagram_button.riv", // Make sure file path is correct
     canvas: document.getElementById("instagram-button"),
     autoplay: true,
     stateMachines: "State Machine 1",
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   // Frontend button
   const frontendButton = new rive.Rive({
-    src: "./rive/frontend_button.riv", // Make sure file path is correct
+    src: "./rive/frontend-button.riv", // Make sure file path is correct
     canvas: document.getElementById("frontend-button"),
     autoplay: true,
     stateMachines: "State Machine 1",
