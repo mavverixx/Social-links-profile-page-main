@@ -18,49 +18,49 @@ try {
   console.error("Error loading GitHub button:", error);
 }
   
-  // LinkedIn button
-  const linkedinButton = new rive.Rive({
-    src: "rive/linkedin-button.riv", // Make sure file path is correct
-    canvas: document.getElementById("linkedin-button"),
-    autoplay: true,
-    stateMachines: "State Machine 1",
-    onLoad: () => {
-      linkedinButton.resizeDrawingSurfaceToCanvas();
-    },
-  });
+  // // LinkedIn button
+  // const linkedinButton = new rive.Rive({
+  //   src: "rive/linkedin-button.riv", // Make sure file path is correct
+  //   canvas: document.getElementById("linkedin-button"),
+  //   autoplay: true,
+  //   stateMachines: "State Machine 1",
+  //   onLoad: () => {
+  //     linkedinButton.resizeDrawingSurfaceToCanvas();
+  //   },
+  // });
   
-  // X button
-  const XButton = new rive.Rive({
-    src: "rive/x_button.riv", // Make sure file path is correct
-    canvas: document.getElementById("x-button"),
-    autoplay: true,
-    stateMachines: "State Machine 1",
-    onLoad: () => {
-      XButton.resizeDrawingSurfaceToCanvas();
-    },
-  });
+  // // X button
+  // const XButton = new rive.Rive({
+  //   src: "rive/x_button.riv", // Make sure file path is correct
+  //   canvas: document.getElementById("x-button"),
+  //   autoplay: true,
+  //   stateMachines: "State Machine 1",
+  //   onLoad: () => {
+  //     XButton.resizeDrawingSurfaceToCanvas();
+  //   },
+  // });
   
-  // Instagram button
-  const instagramButton = new rive.Rive({
-    src: "rive/instagram_button.riv", // Make sure file path is correct
-    canvas: document.getElementById("instagram-button"),
-    autoplay: true,
-    stateMachines: "State Machine 1",
-    onLoad: () => {
-      instagramButton.resizeDrawingSurfaceToCanvas();
-    },
-  });
+  // // Instagram button
+  // const instagramButton = new rive.Rive({
+  //   src: "rive/instagram_button.riv", // Make sure file path is correct
+  //   canvas: document.getElementById("instagram-button"),
+  //   autoplay: true,
+  //   stateMachines: "State Machine 1",
+  //   onLoad: () => {
+  //     instagramButton.resizeDrawingSurfaceToCanvas();
+  //   },
+  // });
   
-  // Frontend button
-  const frontendButton = new rive.Rive({
-    src: "rive/frontend-button.riv", // Make sure file path is correct
-    canvas: document.getElementById("frontend-button"),
-    autoplay: true,
-    stateMachines: "State Machine 1",
-    onLoad: () => {
-      frontendButton.resizeDrawingSurfaceToCanvas();
-    },
-  });
+  // // Frontend button
+  // const frontendButton = new rive.Rive({
+  //   src: "rive/frontend-button.riv", // Make sure file path is correct
+  //   canvas: document.getElementById("frontend-button"),
+  //   autoplay: true,
+  //   stateMachines: "State Machine 1",
+  //   onLoad: () => {
+  //     frontendButton.resizeDrawingSurfaceToCanvas();
+  //   },
+  // });
 
 
   
