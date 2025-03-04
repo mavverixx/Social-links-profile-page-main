@@ -44,6 +44,7 @@ body {
 }
 
 .buttons {
+    display: inline-block;
     width: 100%; /* or a larger fixed width */
     max-width: 300px;
     margin-top: 50px; /* reduced from 150px */
