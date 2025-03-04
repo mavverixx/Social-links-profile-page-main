@@ -9,3 +9,17 @@
     margin-left: 10px;
     margin-right: 10px;
  }
+.git-btn {
+    border: 5px solid black;
+}
+
+.buttons {
+    width: 100%;
+    max-width: 300px;
+    margin: 24px auto;
+  }
+  .button-link {
+    display: block;
+    width: 100%;  /* This should match the artboard width */
+    height: 60px; /* This should match the artboard height */
+  }
