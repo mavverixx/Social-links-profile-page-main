@@ -12,12 +12,15 @@ try {
     onLoad: () => {
       console.log("GitHub button loaded successfully");
       githubButton.resizeDrawingSurfaceToCanvas();
+      githubButton.layout({
+        fit: 'contain',
+        alignment: 'center'
+      });
     },
   });
 } catch (error) {
   console.error("Error loading GitHub button:", error);
 }
-  
   // LinkedIn button
   const linkedinButton = new rive.Rive({
     src: "rive/linkedin-button.riv", // Make sure file path is correct

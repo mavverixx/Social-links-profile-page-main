@@ -11,15 +11,22 @@
  }
 .git-btn {
     border: 5px solid black;
+ 
 }
 
 .buttons {
-    width: 100%;
-    max-width: 300px;
-    margin: 24px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 300px;
+  margin: 24px auto;
   }
-  .button-link {
+
+  canvas {
+    width: 100% !important;
+    height: 100% !important;
     display: block;
-    width: 100%;  /* This should match the artboard width */
-    height: 60px; /* This should match the artboard height */
+    /* Remove any max-width constraints if present */
   }
+  
