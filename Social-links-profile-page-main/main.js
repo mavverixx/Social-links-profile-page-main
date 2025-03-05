@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("Rive library loaded:", typeof rive !== 'undefined');
+console.log("Rive library loaded:", typeof rive !== 'undefined');
 
 
 // GitHub button
@@ -7,10 +7,17 @@ try {
   const githubButton = new rive.Rive({
     src: "rive/github-button.riv",
     canvas: document.getElementById("github-button"),
-    artboard:"Artboard",
-    isTouchScrollEnabled: true,
-    autoplay: true,
     stateMachines: "State Machine 1",
+    layout: new rive.Layout({
+      // fit: rive.Fit.FitWidth,
+      // minX: 50,
+      // minY: 50,
+      // maxX: 240,
+      // maxY: 44,
+      alignment: rive.Alignment.Center,
+      // fit: rive.Fit.Cover, // or try Fit.Fill if you want an exact match (even if it stretches)
+    }),
+    autoplay: true,
   });
 } catch (error) {
   console.error("Error loading GitHub button:", error);
@@ -21,10 +28,18 @@ try {
   const linkedinButton = new rive.Rive({
     src: "rive/linkedin-button.riv",
     canvas: document.getElementById("linkedin-button"),
-    artboard: "Artboard", // Add this to match GitHub button
     isTouchScrollEnabled: true, // Add this to match GitHub button
-    autoplay: true,
     stateMachines: "State Machine 1",
+    layout: new rive.Layout({
+       // fit: rive.Fit.FitWidth,
+      // minX: 50,
+      // minY: 50,
+      // maxX: 240,
+      // maxY: 44,
+      alignment: rive.Alignment.Center,
+      // fit: rive.Fit.Cover, // or try Fit.Fill if you want an exact match (even if it stretches)
+    }),
+    autoplay: true,
   });
 } catch (error) {
   console.error("Error loading LinkedIn button:", error);
@@ -35,9 +50,8 @@ try {
     canvas: document.getElementById("x-button"),
     autoplay: true,
     stateMachines: "State Machine 1",
-    onLoad: () => {
-      XButton.resizeDrawingSurfaceToCanvas();
-    },
+    
+
   });
   
   // Instagram button
@@ -46,9 +60,7 @@ try {
     canvas: document.getElementById("instagram-button"),
     autoplay: true,
     stateMachines: "State Machine 1",
-    onLoad: () => {
-      instagramButton.resizeDrawingSurfaceToCanvas();
-    },
+
   });
   
   // Frontend button
@@ -57,8 +69,6 @@ try {
     canvas: document.getElementById("frontend-button"),
     autoplay: true,
     stateMachines: "State Machine 1",
-    onLoad: () => {
-      frontendButton.resizeDrawingSurfaceToCanvas();
-    },
+
   });
 });

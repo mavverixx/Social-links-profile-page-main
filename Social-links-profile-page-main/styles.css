@@ -9,10 +9,11 @@
     margin-left: 10px;
     margin-right: 10px;
  }
-.git-btn, .linkedin-button {
+.git-btn, .linkedin-btn {
     border: 5px solid black;
- 
 }
+
+
 
 .buttons {
   display: flex;
