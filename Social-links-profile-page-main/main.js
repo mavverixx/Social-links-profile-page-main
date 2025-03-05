@@ -11,9 +11,6 @@ try {
     isTouchScrollEnabled: true,
     autoplay: true,
     stateMachines: "State Machine 1",
-    onLoad: () => {
-      linkedinButton.resizeDrawingSurfaceToCanvas();
-    },
   });
 } catch (error) {
   console.error("Error loading GitHub button:", error);
