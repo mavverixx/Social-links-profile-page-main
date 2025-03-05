@@ -7,8 +7,13 @@ try {
   const githubButton = new rive.Rive({
     src: "rive/github-button.riv",
     canvas: document.getElementById("github-button"),
+    artboard:"Artboard",
+    isTouchScrollEnabled: true,
     autoplay: true,
     stateMachines: "State Machine 1",
+    onLoad: () => {
+      linkedinButton.resizeDrawingSurfaceToCanvas();
+    },
   });
 } catch (error) {
   console.error("Error loading GitHub button:", error);
@@ -19,9 +24,7 @@ try {
     canvas: document.getElementById("linkedin-button"),
     autoplay: true,
     stateMachines: "State Machine 1",
-    onLoad: () => {
-      linkedinButton.resizeDrawingSurfaceToCanvas();
-    },
+  
   });
   
   // X button
