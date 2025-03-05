@@ -9,14 +9,6 @@ try {
     canvas: document.getElementById("github-button"),
     autoplay: true,
     stateMachines: "State Machine 1",
-    onLoad: () => {
-      console.log("GitHub button loaded successfully");
-      githubButton.resizeDrawingSurfaceToCanvas();
-      githubButton.layout({
-        fit: 'contain',
-        alignment: 'center'
-      });
-    },
   });
 } catch (error) {
   console.error("Error loading GitHub button:", error);
