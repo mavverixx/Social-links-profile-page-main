@@ -15,15 +15,20 @@ try {
 } catch (error) {
   console.error("Error loading GitHub button:", error);
 }
-  // LinkedIn button
+
+// LinkedIn button
+try {
   const linkedinButton = new rive.Rive({
-    src: "rive/linkedin-button.riv", // Make sure file path is correct
+    src: "rive/linkedin-button.riv",
     canvas: document.getElementById("linkedin-button"),
+    artboard: "Artboard", // Add this to match GitHub button
+    isTouchScrollEnabled: true, // Add this to match GitHub button
     autoplay: true,
     stateMachines: "State Machine 1",
-  
   });
-  
+} catch (error) {
+  console.error("Error loading LinkedIn button:", error);
+}
   // X button
   const XButton = new rive.Rive({
     src: "rive/x_button.riv", // Make sure file path is correct
