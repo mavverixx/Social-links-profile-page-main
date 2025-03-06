@@ -1,5 +1,17 @@
 body {
-  /* background-color: blue; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  background-color: #c9f1bf; /* Light gray background */
+  font-family: 'Inter', sans-serif;
+}
+main {
+  width: 100%;
+  max-width: 1440px; /* Your desktop size */
+  padding: 0 20px; /* Adds some space on small screens */
 }
 #rick-pic {
     border-radius: 50%;
@@ -11,15 +23,22 @@ body {
     margin-left: 10px;
     margin-right: 10px;
  }
-#box{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-  border: 2px solid black;
-  border-radius: 50px;
-}
+  #box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 50px;
+    width: 100%;
+    max-width: 375px; /* Mobile size */
+    height: auto;
+    margin: 0 auto;
+    padding: 40px;
+    max-width: 90%;
+    box-sizing: border-box; /* This ensures padding doesn't add to width */
+  }
 
 .buttons {
   display: flex;
@@ -36,4 +55,7 @@ body {
     display: block;
     /* Remove any max-width constraints if present */
   }
-  
+  #rick-pic {
+    width: 80px;
+    height: 80px;
+  }
