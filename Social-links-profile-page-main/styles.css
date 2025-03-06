@@ -5,7 +5,11 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 20px;
-  background-color: #f8f8f8; /* Light gray background */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgb(247, 99, 99);
+  transition: background-image 1s ease;
   font-family: 'Inter', sans-serif;
 }
 main {
@@ -16,27 +20,27 @@ main {
 #rick-pic {
     border-radius: 50%;
     border: 8px solid hsl(0, 96%, 67%);
-
-    margin-bottom: 10px;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    width: 150px;    /* Increased from 100px */
+    height: 150px;   /* Increased from 100px */
+ 
  }
-  #box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    border: 2px solid black;
-    border-radius: 50px;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    padding: 40px;
-    max-width: 60%;
-    box-sizing: border-box; /* This ensures padding doesn't add to width */
-  }
+ #box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 50px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 40px;
+  max-width: 60%;
+  box-sizing: border-box;
+  background-color: white; /* Add this line to give your box a white background */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6); /* Optional: adds a drop shadow */
+}
 
 .buttons {
   display: flex;
@@ -53,10 +57,7 @@ main {
     display: block;
     /* Remove any max-width constraints if present */
   }
-  #rick-pic {
-    width: 80px;
-    height: 80px;
-  }
+
   h1{
     font-size: 44px; /* Adjust size as needed */
     margin: 10px 0 5px 0; /* Top right bottom left margins */
