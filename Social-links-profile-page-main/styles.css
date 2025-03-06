@@ -5,7 +5,7 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 20px;
-  background-color: #c9f1bf; /* Light gray background */
+  background-color: #f8f8f8; /* Light gray background */
   font-family: 'Inter', sans-serif;
 }
 main {
@@ -15,9 +15,8 @@ main {
 }
 #rick-pic {
     border-radius: 50%;
-    border: 8px solid hsl(114, 77%, 49%);
-    width: 100px;
-    height: 100px;  
+    border: 8px solid hsl(0, 96%, 67%);
+
     margin-bottom: 10px;
     margin-top: 10px;
     margin-left: 10px;
@@ -32,11 +31,10 @@ main {
     border: 2px solid black;
     border-radius: 50px;
     width: 100%;
-    max-width: 375px; /* Mobile size */
     height: auto;
     margin: 0 auto;
     padding: 40px;
-    max-width: 90%;
+    max-width: 60%;
     box-sizing: border-box; /* This ensures padding doesn't add to width */
   }
 
@@ -58,4 +56,16 @@ main {
   #rick-pic {
     width: 80px;
     height: 80px;
+  }
+  h1{
+    font-size: 44px; /* Adjust size as needed */
+    margin: 10px 0 5px 0; /* Top right bottom left margins */
+    font-weight: 700; /* Bold */
+    color: #333;
+  }
+  p {
+    font-size: 24px; /* Smaller than the heading */
+    margin: 5px 0 15px 0;
+    color: #666;
+    line-height: 1.4;
   }
