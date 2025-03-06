@@ -9,14 +9,10 @@ try {
     canvas: document.getElementById("github-button"),
     stateMachines: "State Machine 1",
     layout: new rive.Layout({
-      // fit: rive.Fit.FitWidth,
-      // minX: 50,
-      // minY: 50,
-      // maxX: 240,
-      // maxY: 44,
-      alignment: rive.Alignment.Center,
-      // fit: rive.Fit.Cover, // or try Fit.Fill if you want an exact match (even if it stretches)
-    }),
+      // fit: rive.Fit.Contain,
+      alignment: rive.Alignment.TopCenter
+      // fit: rive.Fit.Cover
+     }),
     autoplay: true,
   });
 } catch (error) {
@@ -31,7 +27,7 @@ try {
     isTouchScrollEnabled: true, // Add this to match GitHub button
     stateMachines: "State Machine 1",
     layout: new rive.Layout({
-       // fit: rive.Fit.FitWidth,
+      // fit: rive.Fit.FitWidth,
       // minX: 50,
       // minY: 50,
       // maxX: 240,
@@ -46,12 +42,15 @@ try {
 }
   // X button
   const XButton = new rive.Rive({
-    src: "rive/x_button.riv", // Make sure file path is correct
+    src: "rive/x-button.riv", // Make sure file path is correct
     canvas: document.getElementById("x-button"),
-    autoplay: true,
     stateMachines: "State Machine 1",
-    
-
+    layout: new rive.Layout({
+      // fit: rive.Fit.Contain,
+      alignment: rive.Alignment.TopCenter
+      // fit: rive.Fit.Cover
+     }),
+     autoplay: true,
   });
   
   // Instagram button
@@ -60,6 +59,11 @@ try {
     canvas: document.getElementById("instagram-button"),
     autoplay: true,
     stateMachines: "State Machine 1",
+    layout: new rive.Layout({
+      // fit: rive.Fit.Contain,
+      alignment: rive.Alignment.TopCenter
+      // fit: rive.Fit.Cover
+     }),
 
   });
   
@@ -67,8 +71,12 @@ try {
   const frontendButton = new rive.Rive({
     src: "rive/frontend-button.riv", // Make sure file path is correct
     canvas: document.getElementById("frontend-button"),
-    autoplay: true,
     stateMachines: "State Machine 1",
-
+    layout: new rive.Layout({
+      // fit: rive.Fit.Contain,
+      alignment: rive.Alignment.TopCenter
+      // fit: rive.Fit.Cover
+     }),
+     autoplay: true,
   });
 });

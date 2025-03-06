@@ -1,4 +1,6 @@
-
+body {
+  /* background-color: blue; */
+}
 #rick-pic {
     border-radius: 50%;
     border: 8px solid hsl(114, 77%, 49%);
@@ -9,11 +11,15 @@
     margin-left: 10px;
     margin-right: 10px;
  }
-.git-btn-css, .linkedin-btn-css {
-    border: 5px solid black;
+#box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 50px;
 }
-
-
 
 .buttons {
   display: flex;
