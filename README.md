@@ -1,4 +1,4 @@
-# Frontend Mentor - Social links profile solution
+# Social links profile with Rive Button Animations
 
 This is a solution to the [Social links profile challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/social-links-profile-UG32l9m6dQ). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 ![67ca435a07319528784412](https://github.com/user-attachments/assets/1bddb276-04d0-4f9d-b1ca-3bd864926e67)
