@@ -1,7 +1,8 @@
-# Social links profile with Rive Button Animations
+# Social Media Links profile with Rive Button Animations
+![Screen Recording 2025-02-12 at 18-40-56_5](https://github.com/user-attachments/assets/aa89a4cf-4877-4955-a9c6-b1090e6ac0c0)
 
 This is a solution to the [Social links profile challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/social-links-profile-UG32l9m6dQ). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
-![67ca435a07319528784412](https://github.com/user-attachments/assets/1bddb276-04d0-4f9d-b1ca-3bd864926e67)
+
 
 ### Difference between Markdown and README
 
